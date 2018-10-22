@@ -25,8 +25,9 @@ console.log('Service worker registered');
 self.addEventListener('install', function(elem){
 	elem.waitUntil(
 		caches.open(cache_name).then(function(cache){
-			return cache.addAll(cache_objects)
+			 cache.addAll(cache_objects);
 		})
+		.then(() => self.skipWaiting())
 	);
 });
 
@@ -59,6 +60,22 @@ self.addEventListener('fetch', function(elem){
 					console.error(error);
 				});
 			}
+		})
+	);
+});
+
+self.addEventListener('activate', function(elem) {
+	console.log("Service worker activated!");
+	elem.waitUntil(
+		caches.keys().then(function(cache_name) {
+			return Promise.all(
+				cache_name.filter(function(name) {
+					// check if the name starts with restaurant- and not in cache
+					return name.startsWith('restaurant-') && name != cache_name;
+				}).map(function(name) {
+					return caches.delete(name);
+				})
+			);
 		})
 	);
 });
