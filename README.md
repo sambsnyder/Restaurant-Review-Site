@@ -1,5 +1,8 @@
 ## Restaurant Review Site
 
+### Description
+
+A simple site that is mobile friendly, makes use of a service worker, and is accesible to all users.
 
 ### Installation
 
