@@ -1,4 +1,4 @@
-const cache_name = "Restaurant_Reviews_version_1";
+const cache_name = "Restaurant_Reviews_version_2";
 
 const cache_objects = [
 	'/',
