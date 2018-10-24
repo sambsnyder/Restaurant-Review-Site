@@ -1,5 +1,5 @@
-const cache_name = "Restaurant_Reviews_version_2";
-
+const cache_name = "Restaurant_Reviews_version_1";
+// files to be cached
 const cache_objects = [
 	'/',
 	'/index.html',

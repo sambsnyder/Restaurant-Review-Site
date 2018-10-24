@@ -19,10 +19,12 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
-      <div id="map"></div>
-    </section>
-    <section>
+		<nav>
+    	<section aria-label="Map" id="map-container">
+      	<div id="map"></div>
+    	</section>
+		</nav>
+		<section>
       <div class="filter-options">
         <h2>Filter Results</h2>
         <select tabindex="2" role="tablist" aria-label="Select Neighborhood" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">

@@ -56,6 +56,7 @@ nav {
   text-align:center;
 	/*Added*/
 	display: flex;
+	flex-direction: column;
 }
 nav h1 {
   margin: auto;
@@ -112,6 +113,7 @@ nav h1 a {
   background-color: #3397DB;
   align-items: center;
 	padding: 10px 0;
+	margin-top: 320px;
 }
 .filter-options h2 {
   color: white;
@@ -234,6 +236,7 @@ nav h1 a {
   margin: 15px 0 30px;
   text-transform: uppercase;
   line-height: 1.1;
+	margin-top: 219px;
 }
 #restaurant-img {
 	width: 100%;
@@ -262,10 +265,13 @@ nav h1 a {
 	display: flex;
 	flex-direction: column;
 }
+#restaurant-container{
+
+}
 #reviews-container {
   padding: 30px 40px 80px;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
@@ -333,7 +339,7 @@ nav h1 a {
 		justify-content: center;
 	}
 	#restaurant-container h2 {
-		font-size: 4rem;
+		font-size: 2rem;
 	}
 }
 @media screen and (min-width: 900px) {
